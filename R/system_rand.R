@@ -221,6 +221,10 @@ validate_randomization_system <- function() {
   all_functions_ok <- all(grepl("✓", results$functions))
   database_ok <- grepl("✓", results$database)
 
+  print(all_packages_ok)
+  print(all_functions_ok)
+  print(database_ok)
+
   if (all_packages_ok && all_functions_ok && database_ok) {
     cat("OVERALL STATUS: ✓ SYSTEM READY\n")
   } else {

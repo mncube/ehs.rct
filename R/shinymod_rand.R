@@ -499,7 +499,7 @@ randomizationServer <- function(id, postgres_module, auth_info) {
       },
       content = function(file) {
         # Implementation would export audit log
-        write.csv(data.frame(note = "Audit log would be here"), file, row.names = FALSE)
+        utils::write.csv(data.frame(note = "Audit log would be here"), file, row.names = FALSE)
       }
     )
 
